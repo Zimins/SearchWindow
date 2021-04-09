@@ -1,4 +1,7 @@
 # SearchWindow
+
+https://plugins.jetbrains.com/plugin/11139-searchwindow
+
 Quick search your query in idea.
 
 Current feature: 
