@@ -7,17 +7,20 @@
     <description><![CDATA[
       It processes your order.<br>
       Current feature: <br>
-      With shortcut command + i ,
+      With shortcut
+      command + i on mac,
+      control + i on windows.
 
       Input your query at dialog, press enter. <br>
       Then it will search your input at default browser. <br><br>
-      available on mac now.<br>
+      available on mac, window now.<br>
 <br>
       use case:<br>
 <br>
       input                 result<br>
-      kotlin            ->  search "kotlin" at google .<br>
-      :android toast    ->  search "toast" at android developers page.<br>
+      kotlin            ->  search "kotlin" at google with your default browser.<br>
+      :androiddoc toast    ->  search "toast" at android developers page.<br>
+      :androidcode window -> Search "window" as Android code searcher<br>
       :grep context     ->  search "context" at grepcode<br>
       :naver 정자역       ->  search "정자역" at naver<br>
 
@@ -25,7 +28,7 @@
 
     <change-notes><![CDATA[
       1.0 Search your input
-      1.3 Add window support
+      1.3 Add window support, add new hosts (stackoverflow, android code search)
     ]]>
     </change-notes>
 
@@ -46,7 +49,6 @@
             <add-to-group group-id="ToolsMenu" anchor="first"/>
             <keyboard-shortcut first-keystroke="control i" keymap="$default"/>
             <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="meta i"/>
-
         </action>
     </actions>
 
