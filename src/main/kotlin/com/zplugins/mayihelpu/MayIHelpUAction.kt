@@ -4,7 +4,6 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.ui.InputValidator
 import com.intellij.openapi.ui.Messages
-import com.intellij.ui.layout.panel
 
 class MayIHelpUAction : AnAction() {
 
@@ -39,12 +38,7 @@ class MayIHelpUAction : AnAction() {
     private fun getSearchHost(input: String): SearchHost {
         val args = input.split(" ")
 
-        return when(args[0]) {
-            ":naver" -> SearchHost.NAVER
-            ":android" -> SearchHost.ANDROID
-            ":grep" -> SearchHost.GREPCODE
-            else -> SearchHost.GOOGLE
-        }
+        return SearchHost.values().find { it.prefix == args[0] } ?: SearchHost.GOOGLE
     }
 
     class QueryValidator : InputValidator {
