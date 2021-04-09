@@ -25,8 +25,14 @@ intellij {
 patchPluginXml {
     changeNotes """
       Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      <em>most HTML tags may be used</em>
+      """
 }
+
+publishPlugin {
+    token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
+}
+
 test {
     useJUnitPlatform()
 }
